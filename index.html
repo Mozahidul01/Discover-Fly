@@ -27,88 +27,107 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
-            </div>
-            <div class="input-group">
-                <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
-            </div>
-            <div class="inputs">
-                <div class="input-group">
-                    <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
-                <div class="input-group">
-                    <label for="">Return</label>
-                    <input class="inp-style" type="date" name="">
-                </div>
-            </div>
-
-            <div class="input-group f-class">
-
-                <div class="input-name">
-                    <label for="">First Class ($150)</label>
-                </div>
-
-                <div class="input-btn">
-                    <button id="first-class-minus" class="minus-btn">-</button>
-                    <input id="first-class-number" class="inp-style input-style" type="number" name="" name="" value="1">
-                    <button id="first-class-plus" class="plus-btn" >+</button>
-                </div>
-            </div>
-
-            <div class="input-group f-class">
-
-                <div class="input-name">
-                    <label for="">Economy ($100)</label>
-                </div>
-
-                <div class="input-btn">
-                    <button id="economy-minus" class="minus-btn">-</button>
-                    <input id="economy-number" class="inp-style input-style" type="number" name="" name="" value="1">
-                    <button id="economy-plus" class="plus-btn" >+</button>
+    <section id="booking-form" class="container">
+        <div class="main-content">
+            <div class="booking-form-area">
+                <div class="booking-form">
+                    <h3>Booking Flights</h3>
+                    <div class="input-group">
+                        <label for="">Flying From</label>
+                        <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Flying To</label>
+                        <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                    </div>
+                    <div class="inputs">
+                        <div class="input-group">
+                            <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Return</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                    </div>
+        
+                    <div class="input-group f-class">
+        
+                        <div class="input-name">
+                            <label for="">First Class ($150)</label>
+                        </div>
+        
+                        <div class="input-btn">
+                            <button id="first-class-minus" class="minus-btn">-</button>
+                            <input id="first-class-number" class="inp-style input-style" type="number" name="" name="" value="1" disabled>
+                            <button id="first-class-plus" class="plus-btn" >+</button>
+                        </div>
+                    </div>
+        
+                    <div class="input-group f-class">
+        
+                        <div class="input-name">
+                            <label for="">Economy ($100)</label>
+                        </div>
+        
+                        <div class="input-btn">
+                            <button id="economy-minus" class="minus-btn">-</button>
+                            <input id="economy-number" class="inp-style input-style" type="number" name="" name="" value="1" disabled>
+                            <button id="economy-plus" class="plus-btn" >+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="calculations">
+                        <div class="amount">
+                            <div class="left">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="sub-total">250</span></p>
+                            </div>
+                        </div>
+        
+                        <div class="amount">
+                            <div class="left">
+                                <p>Charge 10% VAT</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="tax-amount">25</span></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="amount">
+                            <div class="left">
+                                <h4>Total</h4>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="total-price">275</span></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <button id="booking-btn" class="btn-style">Book Now</button>
+        
                 </div>
             </div>
             
-            <div class="calculations">
-                <div class="amount">
-                    <div class="left">
-                        <p>Subtotal</p>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="sub-total">250</span></p>
-                    </div>
-                </div>
-
-                <div class="amount">
-                    <div class="left">
-                        <p>Charge 10% VAT</p>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="tax-amount">25</span></p>
-                    </div>
-                </div>
-                <hr>
-                <div class="amount">
-                    <div class="left">
-                        <h4>Total</h4>
-                    </div>
-                    <div class="right">
-                        <p>$<span id="total-price">275</span></p>
-                    </div>
+            <div class="booking-content-area">
+                <div class="booking-content">
+                    <h1>discover around<br> the world</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
         </div>
+    </section>
 
-        <div class="booking-content">
-            <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+    <section id="booking-confirmation">
+        <div class="confirmation-area">
+            <div class="confirmation-content">
+                <p>Thank You for Purchasing Tickets from Us</p>
+                <p>You have Booked <span id="first-class-info">1</span> First Class Ticket.</p>
+                <p>And <span id="economy-info">1</span> Economy Class Ticket. </p>
+                <p>Your Total Amount is  <span id="amount-info">275</span> dollars including Vat.</p> 
+            </div>
         </div>
     </section>
 

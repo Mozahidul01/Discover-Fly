@@ -42,8 +42,10 @@ function getInputValue(ticket) {
 
 //Calculate Price
 function calculateTotal() {
-    const firstClassTotal = getInputValue('first-class') * 150;
-    const economyTotal = getInputValue('economy') * 100;
+    const firstClassTicket = getInputValue('first-class');
+    const firstClassTotal =  firstClassTicket * 150;
+    const economyClassTicket = getInputValue('economy');
+    const economyTotal = economyClassTicket * 100;
     const subTotal = firstClassTotal + economyTotal;
     const tax = subTotal / 10;
     const totalPrice = subTotal + tax;
@@ -51,4 +53,28 @@ function calculateTotal() {
     document.getElementById('sub-total').innerText = subTotal;
     document.getElementById('tax-amount').innerText = tax;
     document.getElementById('total-price').innerText = totalPrice;
+
+    //Dynamic Confirmation message value change
+    const firstClassInfo = document.getElementById('first-class-info');
+    const economyInfo = document.getElementById('economy-info');
+    const amountInfo = document.getElementById('amount-info');
+
+    firstClassInfo.innerHTML = firstClassTicket;
+    economyInfo.innerHTML = economyClassTicket;
+    amountInfo.innerHTML = totalPrice;
+}
+
+
+//booking button handler
+document.getElementById('booking-btn').addEventListener('click', function () {
+    confirmationMessageShow();
+});
+
+
+//hide booking form and show confirmation message
+function confirmationMessageShow() {
+    const formArea = document.getElementById('booking-form');
+    formArea.style.display = "none";
+    const confirmationArea = document.getElementById('booking-confirmation');
+    confirmationArea.style.display = "block";
 }

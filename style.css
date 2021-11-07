@@ -7,8 +7,9 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     height: 100vh;
-    background:url("images/bg.png");
+    background:linear-gradient(0deg, rgba(70, 76, 163, 0.4), rgba(55, 54, 138, 0.2)),url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -22,7 +23,7 @@ nav{
 }
 .container{
     width: 1200px;
-    max-width: 85%;
+    max-width: 90%;
     margin: 0 auto;
 }
 nav ul{
@@ -40,18 +41,34 @@ nav ul li a:hover, a.active{
     border-radius: 5px;
 }
 .main-content{
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 70px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
+
+.booking-form-area{
+    width: 50%;
+}
+
+.booking-content-area{
+    width: 50%;
+    margin-left: 50px;
+}
+
 .booking-form{
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 25px;
     border-radius: 5px;
-    float: left;
 }
+
+.booking-content{
+    color: #fff;
+    width: 80%;
+}
+
 .booking-form h3{
     margin: 10px 0px;
 }
@@ -88,6 +105,9 @@ nav ul li a:hover, a.active{
 }
 .input-style{
     text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1d1d1d;
 }
 .booking-form  .calculations{
     padding-top: 35px;
@@ -112,16 +132,16 @@ nav ul li a:hover, a.active{
     grid-template-columns: 1fr 1fr;
     gap: 10px;
 }
-.booking-content{
-    color: #fff;
-    width: 80%;
-}
 .booking-content h1{
     font-size: 70px;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
     font-weight: 400;
     margin-bottom: 25px;
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn-style{
@@ -131,10 +151,41 @@ nav ul li a:hover, a.active{
     border-radius: 5px;
     border: none;
     color: #fff;
+    font-size: 18px;
     font-weight: 500;
     background-color:  #3352F2;
+    cursor: pointer;
 }
-.amount{
+
+.confirmation-area{
+    height: 90vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.confirmation-content{
+    background-color: rgba(20, 33, 61, 0.9);
+    padding: 50px 80px;
+    border-radius:10px;
+}
+
+.confirmation-content p{
+    font-size: 28px;
+    font-weight: 500;
+    color: #E5E5E5;
+}
+
+#first-class-info, #economy-info, #amount-info{
+    color: #dacb00;
+}
+
+#booking-form{
+    display: block;
+}
+
+#booking-confirmation{
+    display: none;
+}
+
